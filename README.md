@@ -1,10 +1,6 @@
 # Stable-Diffusion
 Stable Diffusion  博客介绍：https://huggingface.co/blog/stable_diffusion
 
-稳定的扩散 🎨
-
-...使用🧨扩散器
-
 稳定扩散是由CompVis，Stability AI和LAION的研究人员和工程师创建的文本到图像潜在扩散模型。 它是在来自LAION-512B数据库子集的512x5图像上进行训练的。LAION-5B是目前存在的最大，可自由访问的多模态数据集。
 
 在这篇文章中，我们想展示如何将稳定扩散与扩散器库一起使用🧨，解释模型是如何工作的，最后更深入地探讨如何允许 一个用于自定义映像生成管道。diffusers
@@ -15,12 +11,8 @@ Stable Diffusion  博客介绍：https://huggingface.co/blog/stable_diffusion
 扩散器入门 🧨
 现在，让我们开始 生成一些图像 🎨 .
 
-
 运行稳定扩散
-
-
 许可证
-
 在使用模型之前，您需要接受模型许可证才能下载和使用权重。注意：不再需要通过 UI 显式接受许可证。
 
 该许可证旨在减轻如此强大的机器学习系统的潜在有害影响。 我们要求用户完整而仔细地阅读许可证。在这里，我们提供一个摘要：
@@ -28,9 +20,7 @@ Stable Diffusion  博客介绍：https://huggingface.co/blog/stable_diffusion
 您不能使用该模型故意生成或共享非法或有害的输出或内容，
 我们对您生成的输出不主张任何权利，您可以自由使用它们，并对它们的使用负责，这不应违反许可证中的规定，并且
 您可以重新分配权重，并将模型用于商业和/或服务。如果您这样做，请注意您必须包含与许可证中相同的使用限制，并将CreativeML OpenRAIL-M的副本共享给您的所有用户。
-
 用法
-
 首先，您应该安装以运行以下代码片段：diffusers==0.10.2
 
 pip install diffusers==0.10.2 transformers scipy ftfy accelerate
@@ -162,11 +152,9 @@ image = pipe(prompt, height=512, width=768).images[0]
 # you can save the image with
 # image.save(f"astronaut_rides_horse.png")
 
-png
+.png
 
-
-How does Stable Diffusion work?
-
+稳定扩散如何工作？
 看过稳定扩散可以产生的高质量图像后，让我们试着了解一下 模型的功能更好一些。
 
 稳定扩散基于一种称为潜在扩散的特定类型的扩散模型，该模型在具有潜在扩散模型的高分辨率图像合成中提出。
@@ -212,7 +200,6 @@ U-Net有一个编码器部分和一个解码器部分，都由ResNet块组成。
 综上所述，现在让我们通过说明逻辑流来仔细看看模型在推理中的工作原理。
 
 标清管道
-
 稳定扩散模型将潜在种子和文本提示作为输入。然后使用潜在种子生成大小的随机潜在图像表示
 64
 ×
@@ -234,9 +221,7 @@ K-LMS 调度程序
 
 在对潜在和稳定扩散的简要介绍之后，让我们看看如何高级使用🤗拥抱脸库！diffusers
 
-
 编写自己的推理管道
-
 最后，我们将展示如何使用 创建自定义扩散管线。 编写自定义推理管道是该库的高级用法，可用于切换某些组件，例如上面解释的VAE或调度程序。diffusersdiffusers
 
 例如，我们将展示如何将稳定扩散与不同的调度器一起使用，即在此 PR 中添加的 Katherine Crowson 的 K-LMS 调度器。
