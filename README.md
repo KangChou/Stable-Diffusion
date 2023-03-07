@@ -1,5 +1,11 @@
 # Stable-Diffusion
 Stable Diffusion  博客介绍：https://huggingface.co/blog/stable_diffusion
+
+
+运行地址：
+https://colab.research.google.com/drive/1Gg_dUYWet87CSKZ3vpZqYN97nX7DQ1hH#scrollTo=DCancU56vEwm
+
+
 稳定扩散是由[CompVis](https://github.com/CompVis)，[Stability AI](https://stability.ai/)和[LAION](https://laion.ai/)的研究人员和工程师创建的文本到图像潜在扩散模型。 它是在[来自LAION-512B](https://laion.ai/blog/laion-5b/)数据库子集的512x5图像上进行训练的。*LAION-5B*是目前存在的最大，可自由访问的多模态数据集。
 
 在这篇文章中，我们想展示如何将稳定扩散与[扩散器库一起使用🧨](https://github.com/huggingface/diffusers)，解释模型是如何工作的，最后更深入地探讨如何允许 一个用于自定义映像生成管道。`diffusers`
