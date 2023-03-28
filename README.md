@@ -437,7 +437,6 @@ pil_images[0]
 
 ```
 
-[[图片上传中...(image-4cf375-1678157858351-0)]](https://huggingface.co/blog/assets/98_stable_diffusion/stable_diffusion_k_lms.png) 
 
 我们已经从使用拥抱面扩散器稳定扩散的基本使用到库的更高级使用🤗，我们试图在现代扩散系统中引入所有部分。如果您喜欢本主题并想要了解更多信息，我们建议您使用以下资源：
 
