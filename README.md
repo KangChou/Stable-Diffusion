@@ -1,6 +1,8 @@
 # Stable-Diffusion
 Stable Diffusion  博客介绍：https://huggingface.co/blog/stable_diffusion
 
+stable-diffusion-webui-colab： https://github.com/camenduru/stable-diffusion-webui-colab
+
 
 运行地址：
 https://colab.research.google.com/drive/1Gg_dUYWet87CSKZ3vpZqYN97nX7DQ1hH#scrollTo=DCancU56vEwm
@@ -177,7 +179,7 @@ grid = image_grid(images, rows=1, cols=3)
 
 ```
 
-[[图片上传中...(image-bceae5-1678157858352-2)]](https://huggingface.co/blog/assets/98_stable_diffusion/stable_diffusion_22_1.png) 
+
 
 默认情况下，稳定扩散会产生像素图像。使用 and 参数覆盖默认值非常容易，以纵向或横向比例创建矩形图像。`512 × 512``height``width`
 
@@ -198,8 +200,6 @@ image = pipe(prompt, height=512, width=768).images[0]
 # image.save(f"astronaut_rides_horse.png")
 
 ```
-
-[[图片上传中...(image-e95885-1678157858352-1)]](https://huggingface.co/blog/assets/98_stable_diffusion/stable_diffusion_26_1.png) 
 
 ## [](https://huggingface.co/blog/stable_diffusion#how-does-stable-diffusion-work)稳定扩散如何工作？
 
