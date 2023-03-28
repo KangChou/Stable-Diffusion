@@ -82,9 +82,9 @@ image = pipe(prompt).images[0]
 
 ```
 
-结果如下所示
 
-[[图片上传中...(image-3c8874-1678157858352-5)]](https://huggingface.co/blog/assets/98_stable_diffusion/stable_diffusion_12_1.png) 
+
+
 
 前面的代码每次运行时都会给你一个不同的图像。
 
@@ -117,9 +117,8 @@ image = pipe(prompt, guidance_scale=7.5, generator=generator).images[0]
 
 ```
 
-结果如下所示
 
-[[图片上传中...(image-f6c76b-1678157858352-4)]](https://huggingface.co/blog/assets/98_stable_diffusion/stable_diffusion_14_1.png) 
+
 
 您可以使用参数更改推理步骤数。`num_inference_steps`
 
@@ -138,7 +137,6 @@ image = pipe(prompt, guidance_scale=7.5, num_inference_steps=15, generator=gener
 
 ```
 
-[[图片上传中...(image-9cbbcd-1678157858352-3)]](https://huggingface.co/blog/assets/98_stable_diffusion/stable_diffusion_16_1.png) 
 
 注意结构是相同的，但宇航员的服和马的一般形式存在问题。 这表明仅使用15个去噪步骤会显著降低生成结果的质量。如前所述，去噪步骤通常足以生成高质量的图像。`50`
 
