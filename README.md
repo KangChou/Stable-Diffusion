@@ -7,6 +7,32 @@ stable-diffusion-webui-colab： https://github.com/camenduru/stable-diffusion-we
 运行地址：
 https://colab.research.google.com/drive/1Gg_dUYWet87CSKZ3vpZqYN97nX7DQ1hH#scrollTo=DCancU56vEwm
 
+lora模型：
+```
+from diffusers import StableDiffusionPipeline, DEISMultistepScheduler
+ 
+model_id = "./model/cilloutmixNi"
+ 
+pipe = StableDiffusionPipeline.from_pretrained(model_id, custom_pipeline="lpw_stable_diffusion")
+pipe.scheduler = DEISMultistepScheduler.from_config(pipe.scheduler.config)
+pipe = pipe.to("cuda")
+ 
+prompt = "<lora:koreanDollLikeness_v10:0.8>, best quality, ultra high res, (photorealistic:1.4), 1woman, sleeveless white button shirt, black skirt, black choker, cute, (Kpop idol), (aegyo sal:1), (silver hair:1), ((puffy eyes)), looking at viewer, peace sign"
+negative_prompt = "paintings, sketches, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale)), skin spots, acnes, skin blemishes, age spot, glans, nsfw, nipples"
+ 
+image = pipe(
+    prompt,
+    num_inference_steps=40,
+    guidance_scale=10,
+    width=512,
+    height=512,
+    max_embeddings_multiples=2,
+    negative_prompt=negative_prompt
+).images[0]
+ 
+image.save("test.png")
+```
+
 
 稳定扩散是由[CompVis](https://github.com/CompVis)，[Stability AI](https://stability.ai/)和[LAION](https://laion.ai/)的研究人员和工程师创建的文本到图像潜在扩散模型。 它是在[来自LAION-512B](https://laion.ai/blog/laion-5b/)数据库子集的512x5图像上进行训练的。*LAION-5B*是目前存在的最大，可自由访问的多模态数据集。
 
