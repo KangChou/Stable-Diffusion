@@ -33,6 +33,7 @@ image = pipe(
 image.save("test.png")
 ```
 
+参考：https://self-development5/
 
 稳定扩散是由[CompVis](https://github.com/CompVis)，[Stability AI](https://stability.ai/)和[LAION](https://laion.ai/)的研究人员和工程师创建的文本到图像潜在扩散模型。 它是在[来自LAION-512B](https://laion.ai/blog/laion-5b/)数据库子集的512x5图像上进行训练的。*LAION-5B*是目前存在的最大，可自由访问的多模态数据集。
 
