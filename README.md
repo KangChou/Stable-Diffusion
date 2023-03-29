@@ -3,6 +3,8 @@ Stable Diffusion  博客介绍：https://huggingface.co/blog/stable_diffusion
 
 stable-diffusion-webui-colab： https://github.com/camenduru/stable-diffusion-webui-colab
 
+stable_diffusion_chilloutmix：https://github.com/wibus-wee/stable_diffusion_chilloutmix_ipynb/blob/main/prompts.md
+
 
 运行地址：
 https://colab.research.google.com/drive/1Gg_dUYWet87CSKZ3vpZqYN97nX7DQ1hH#scrollTo=DCancU56vEwm
